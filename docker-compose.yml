@@ -1,0 +1,8 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  nvr-nginx:
+    build: .
+    ports:
+      - "8082:80"
+    volumes:
+      - "${ENTRY_POINT}:/usr/share/nginx/html"
